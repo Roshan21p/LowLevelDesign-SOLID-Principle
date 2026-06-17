@@ -21,7 +21,7 @@ public class FileProcessor {
 
         String outputFilePath = Paths.get(this.fullFilePath).getFileName().toString().replace(".txt", ".html");
 
-        System.println("Output file path: " + outputFilePath);
+        System.out.println("Output file path: " + outputFilePath);
 
         try (BufferedWriter writer = Files.newBufferedWriter(Paths.get(outputFilePath))) {
             writer.write(text);

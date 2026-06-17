@@ -14,7 +14,7 @@ public class TextProccessor {
 
         try {
             System.out.println("Please Specify the full path of the text file to be converted to HTML:");
-            BufferReader reader = new BufferedReader(new InputStreamReader(System.in));
+            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             String fullFilePath = reader.readLine();
 
             if (fullFilePath == null || fullFilePath.isEmpty()) {

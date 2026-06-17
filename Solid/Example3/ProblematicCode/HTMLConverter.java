@@ -11,7 +11,8 @@ public class HTMLConverter {
 
         try {
             System.out.println("Please Specify the full path of the text file to be converted to HTML:");
-            BufferReader reader = new BufferedReader(new InputStreamReader(System.in));
+            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
             String fullFilePath = reader.readLine();
 
             if (fullFilePath == null || fullFilePath.isEmpty()) {
@@ -58,7 +59,7 @@ public class HTMLConverter {
 
         String outputFilePath = Paths.get(fullFilePath).getFileName().toString().replace(".txt", ".html");
 
-        System.println("Output file path: " + outputFilePath);
+        System.out.println("Output file path: " + outputFilePath);
 
         try (BufferedWriter writer = Files.newBufferedWriter(Paths.get(outputFilePath))) {
             writer.write(text);
